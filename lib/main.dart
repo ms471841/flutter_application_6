@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:getwidget/components/loader/gf_loader.dart';
 import 'package:getwidget/getwidget.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 void main() {
   runApp(ProfileUI());
@@ -23,6 +24,7 @@ class _ProfileUIState extends State<ProfileUI> {
             title: Text("Progress"),
           ),
           body: Container(
+            margin: EdgeInsets.all(10),
             child: SingleChildScrollView(
               physics: BouncingScrollPhysics(),
               child: Center(
@@ -30,6 +32,10 @@ class _ProfileUIState extends State<ProfileUI> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    Text(
+                      "Custom progress bar",
+                      style: TextStyle(fontSize: 20),
+                    ),
                     SizedBox(
                       height: 30,
                     ),
@@ -303,6 +309,139 @@ class _ProfileUIState extends State<ProfileUI> {
                             width: 100,
                             image: AssetImage("assets/images/rocket.gif"),
                           ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Divider(
+                      color: Colors.black,
+                      thickness: 10,
+                    ),
+                    Text("SpinKit"),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        SpinKitRotatingCircle(
+                          color: Colors.blue,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        SpinKitRotatingPlain(
+                          color: Colors.red,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        SpinKitDoubleBounce(
+                          color: Colors.red,
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Divider(),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        SpinKitWanderingCubes(
+                          color: Colors.cyan,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        SpinKitFadingFour(
+                          color: Colors.yellow,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        SpinKitFadingCircle(
+                          color: Colors.orange,
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Divider(),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        SpinKitWave(
+                          color: Colors.teal,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        SpinKitFadingCube(
+                          color: Colors.green,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        SpinKitFadingGrid(
+                          color: Colors.black,
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Divider(),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        SpinKitRing(
+                          color: Colors.orange,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        SpinKitHourGlass(
+                          color: Colors.blue,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        SpinKitPulse(
+                          color: Colors.black,
+                        ),
+                        SpinKitThreeBounce(
+                          color: Colors.purple,
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Divider(),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        SpinKitChasingDots(
+                          color: Colors.teal,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        SpinKitRipple(
+                          color: Colors.pink,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        SpinKitSquareCircle(
+                          color: Colors.black,
+                        ),
+                        SpinKitPumpingHeart(
+                          color: Colors.red,
                         ),
                       ],
                     ),
