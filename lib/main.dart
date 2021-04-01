@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:getwidget/components/loader/gf_loader.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 
 void main() {
   runApp(ProfileUI());
@@ -443,6 +444,85 @@ class _ProfileUIState extends State<ProfileUI> {
                         SpinKitPumpingHeart(
                           color: Colors.red,
                         ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Divider(
+                      thickness: 10,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text("percentage indecator"),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CircularPercentIndicator(
+                          radius: 100,
+                          lineWidth: 10,
+                          percent: .8,
+                          header: Text("Icon Header"),
+                          center: Icon(
+                            Icons.person_pin,
+                            size: 50,
+                            color: Colors.blue,
+                          ),
+                          backgroundColor: Colors.grey,
+                          progressColor: Colors.blue,
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CircularPercentIndicator(
+                          radius: 130,
+                          animation: true,
+                          animationDuration: 1200,
+                          lineWidth: 15,
+                          percent: .4,
+                          //header: Text("Icon Header"),
+                          center: Text(
+                            "40 Hours",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 20),
+                          ),
+                          backgroundColor: Colors.grey,
+                          circularStrokeCap: CircularStrokeCap.butt,
+                          progressColor: Colors.red,
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CircularPercentIndicator(
+                          radius: 130,
+                          animation: true,
+                          animationDuration: 1200,
+                          lineWidth: 15,
+                          percent: .4,
+                          //header: Text("Icon Header"),
+                          center: Text(
+                            "60 %",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w600, fontSize: 20),
+                          ),
+                          backgroundColor: Colors.grey,
+                          circularStrokeCap: CircularStrokeCap.round,
+                          progressColor: Colors.purple,
+                        )
                       ],
                     ),
                   ],
